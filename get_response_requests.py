@@ -38,5 +38,5 @@ if __name__=='__main__':
     print(response.cookies)    #Cookie的类型是RequestsCookieJar
 
     #Session对象保持连接,模拟同一会话,解决了重复访问Cookie不一样的问题
-    session = requests.Session()
-    response = session.get(url=target_url, params=param, headers=header, proxies=proxy)
+    with requests.Session() as session:
+        response = session.get(url=target_url, params=param, headers=header, proxies=proxy)

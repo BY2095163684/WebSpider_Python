@@ -5,5 +5,5 @@ __________________________________
 
 - 请求
     - 访问网页以获取响应的数据
-    - __requests__: 简单好用的HTTP请求库
-    - __httpx__: 此库用于解决HTTP/2.0请求, API与requests相似
+    - *[requests](https://github.com/BY2095163684/WebSpider_Python/blob/main/get_response_requests.py)*: 简单好用的HTTP请求库
+    - *[httpx](https://github.com/BY2095163684/WebSpider_Python/blob/main/README.md)*: 此库用于解决HTTP/2.0请求, API与requests相似
