@@ -1,7 +1,7 @@
 ## 异步爬虫
 
 - 一些概念:
-    - __event_loop__: 事件循环,运算核心,面对多个并决定执行某个 __coroutine__ 或 __task__
+    - __event_loop__: 事件循环,运算核心,面对多个并决定执行某个 __coroutine__ 或 __task__.
     不能自主切换上下文,需要 __coroutine__ 或 __task__ 主动传递控制权.
     - __coroutine__ (或称协程): 具有开始(enter)/暂停(exit)以及任意恢复(resume)执行的能力
         - coroutine object
@@ -19,8 +19,8 @@
 
 在Python爬虫里,异步多用于请求URL时充分利用网络响应的耗时,比如要请求100个网站,可以让这100个网站同时"排队". `import asyncio` + `import aiohttp` 就可以支持异步请求
 
---> *[一个分析案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_asyncio/asyncio.basic.py)*
+--> *[一个分析案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_asyncio/asyncio_basic.py)*
 大概了解asyncio异步原理
 
---> *[一个实战案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_asyncio/asyncio.test.py)*
+--> *[一个实战案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_asyncio/asyncio_test.py)*
 爬取站长素材2~10页动漫图片
