@@ -12,6 +12,6 @@ __________________________________
 简单来说,在单进程单线程里,遇到耗时操作(尤其是网络请求)时,能够先挂起这个耗时操作,先去做别的事,充分利用资源.
 Python标准库中的模块`asyncio`,与关键字`async`/`await`配合能更方便地编写协程代码.
 
-Python爬虫中`import asyncio`与`import aiohttp`(异步HTTP网络模块)联动后可以实现 __异步爬虫__.
+Python爬虫中`asyncio`与`aiohttp`(异步HTTP网络模块)联动后可以实现 __异步爬虫__.
 
 --> *[分析 + 案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_asyncio/)*
