@@ -1,33 +1,17 @@
 ## 想成为爬虫高手,至少先踏进牢门半步 (?)
-__________________________________
+
 ### 简单爬虫
 
-一般包含三步: __请求__, __解析__, __保存__.
+最基础的爬虫,__请求__ + __解析__ + __保存__.
 
-- 请求
-    - 访问网页以获取响应的数据
-    - *[requests](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/get_response_requests.py)*: 简单好用的HTTP请求库
-    - *[httpx](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/get_response_httpx.py)*: 此库用于解决HTTP/2.0请求, API与requests相似
-
-- 解析
-    - 从请求得到的数据解析提取有用数据
-    - *[lxml](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/parse_data_lxml.py)*: 利用Xpath语法,修正并解析HTML文本
-    - *[parsel](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/parse_data_parsel.py)*: Xpath和CSS选择器都可用
-
-- 保存
-    - 将解析得到的数据下载至本地
-    - *[TXT文本文件存储](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/save_data_txt.py)*: 最原始的文本
-    - *[JSON文件存储](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/save_data_json.py)*: 更为严格清晰的格式,返回的是json对象时使用
-
-*[简单小案例_1](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/test_1.py)*: requests + lxml 爬取站长素材第一页动漫图片
-
-*[简单小案例_2](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/test_2.py)*: requests + parsel + json 爬取网站第一页电影排名信息
-
+--> *[分析 + 案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_simple/)*
 __________________________________
-### 异步与协程
+### 异步爬虫
 
 协程是一种用户态内的上下文切换技术,也被称为微线程,它通过一个线程实现代码块之间的相互切换执行.
 简单来说,在单进程单线程里,遇到耗时操作(尤其是网络请求)时,能够先挂起这个耗时操作,先去做别的事,充分利用资源.
 Python标准库中的模块`asyncio`,与关键字`async`/`await`配合能更方便地编写协程代码.
 
 Python爬虫中`import asyncio`与`import aiohttp`(异步HTTP网络模块)联动后可以实现 __异步爬虫__.
+
+--> *[分析 + 案例](https://github.com/BY2095163684/WebSpider_Python/blob/main/Spider_asyncio/)*
